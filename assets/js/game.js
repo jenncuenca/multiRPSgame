@@ -8,3 +8,16 @@ var config = {
     messagingSenderId: "52108720569"
   };
   firebase.initializeApp(config);
+
+  //SCORE VARIABLES
+  var winsP1= 0;
+  var lossP1= 0;
+  var tie= 0;
+  var winsP2= 0;
+  var lossP2= 0;
+
+  //PLAYER CHOICE VARIABLES
+  var p1Choice= '';
+  var p2Choice= '';
+  
+  
