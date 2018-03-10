@@ -1,92 +1,118 @@
 <!DOCTYPE html>
 <html lang="en-us">
 
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <!-- RESPONSIVE VIEWPORT -->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-            
-        <title>ROCK - PAPER - SCISSORS WITH FRIENDS</title>
-            
-        <!-- RESET CSS -->
-        <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css">
-        <!-- BOOTSTRAP CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <!-- CUSTOM CSS -->
-        <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css"> 
-        
-        <!-- GOOGLE FONTS -->
-    <link href="URL TO GOOGLE FONT HERE" rel="stylesheet" rel="stylesheet">
-    </head>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- RESPONSIVE VIEWPORT -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <body>
+    <title>ROCK - PAPER - SCISSORS WITH FRIENDS</title>
+
+    <!-- RESET CSS -->
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css">
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
+
+    <!-- GOOGLE FONTS -->
+    <link href="URL TO GOOGLE FONT HERE" rel="stylesheet" rel="stylesheet">
+</head>
+
+<body>
     <!-- CONTENT STARTS HERE -->
-    <div class ="container">
+    <div class="container">
         <h2>WELCOME TO ROCK - PAPER - SCISSORS WITH FRIENDS</h2>
 
         <div class="row">
+            <!-- Player Inputs Name -->
             <div class="playerName">
                 <form id="player-name-form">
                     <input type="text" id="name-input" placeholder="What's Your Name?">
                     <input id="addName" type="submit" value="GO!">
                 </form>
             </div>
-            
+
+            <!-- PLAYER ONE -->
             <div class="col-md-6" id="playerOne">
-                <!-- PLAYER ONE -->
-                <div id="playerOneChoice"><!--Player One's Input Displayed Here--></div>
+                <!-- PLACEHOLDER FOR "LOGIN" WAIT MSG -->
+                <div class="waiting">
+                    <h3>WAITING FOR PLAYER 1</h3>
+                </div>
+
+                <div id="playerOneChoice">
+                    <!--Player One's Input Displayed Here-->
+                </div>
                 <div class=row>
                     <div class="col-sm-12" id="p1Scoreboard">
                         <!--PLAYER ONE SCOREBOARD-->
-                        <p id= "playerOneWins">WINS:</p>
-                        <p id= "playerOneLoses">LOSSES:</p>
-                        <p id= "playerTie">TIES:</p>
+                        <p id="playerOneWins">WINS:</p>
+                        <p id="playerOneLoses">LOSSES:</p>
+                        <p id="playerTie">TIES:</p>
                     </div>
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-md-6" id="playerTwo">
-                    <!-- PLAYER TWO -->
-                    <div id="playerTwoChoice"><!--Player Two's Input Displayed Here--></div>
+            <!-- REVEAL WINNER -->
+            <div class="results"></div>
 
-                    <div class=row>
-                        <div class="col-sm-12" id="p1Scoreboard">
-                            <!--PLAYER TWO SCOREBOARD-->
-                            <p id= "playerTwoWins">WINS:</p>
-                            <p id= "playerTwoLoses">LOSSES:</p>
-                            <p id= "playerTie">TIES:</p>
-                        </div>
+            <!-- PLAYER TWO -->
+            <div class="col-md-6" id="playerTwo">
+                <!-- PLACEHOLDER FOR "LOGIN" WAIT MSG -->
+                <div class="waiting">
+                    <h3>WAITING FOR PLAYER 2</h3>
+                </div>
+
+                <div id="playerTwoChoice">
+                    <!--Player Two's Input Displayed Here-->
+                </div>
+
+                <div class=row>
+                    <div class="col-sm-12" id="p1Scoreboard">
+                        <!--PLAYER TWO SCOREBOARD-->
+                        <p id="playerTwoWins">WINS:</p>
+                        <p id="playerTwoLoses">LOSSES:</p>
+                        <p id="playerTie">TIES:</p>
                     </div>
                 </div>
             </div>
-            
         </div>
-
-
-
-    <div class="container"><!--Possible container for chat box--></div>
-
     </div>
-    
+
+    <!--Possible chat box-->
+    <div class="container chat">
+        <div id="message-box"></div>
+
+        <form id="message-form">
+            <input type="text" id="message-input" placeholder="Place Witty Banter Here">
+            <input id="addMessage" type="submit" value="Send">
+        </form>
+    </div>
 
 
 
 
-        <!-- FIREBASE JS -->
-        <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
 
-        <!-- jquery + bootstrap jquery -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
-         
-        <!--My javascript code -->
-        <script type="text/javascript" src="assets/js/game.js"></script>
-         
-        <!-- Scripts from Bootstrap: Popper.js, then Bootstrap JS -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-    </body> 
+
+    <!-- FIREBASE JS -->
+    <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+
+    <!-- jquery + bootstrap jquery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
+
+    <!--My javascript code -->
+    <script type="text/javascript" src="assets/js/game.js"></script>
+
+    <!-- Scripts from Bootstrap: Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+</body>
+
 </html>
