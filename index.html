@@ -23,9 +23,15 @@
     <body>
     <!-- CONTENT STARTS HERE -->
     <div class ="container">
-        <h1>WELCOME TO ROCK - PAPER - SCISSORS WITH FRIENDS</h1>
+        <h2>WELCOME TO ROCK - PAPER - SCISSORS WITH FRIENDS</h2>
 
         <div class="row">
+            <div class="playerName">
+                <form id="player-name-form">
+                    <input type="text" id="name-input" placeholder="What's Your Name?">
+                    <input id="addName" type="submit" value="GO!">
+                </form>
+            </div>
             
             <div class="col-md-6" id="playerOne">
                 <!-- PLAYER ONE -->
@@ -33,8 +39,9 @@
                 <div class=row>
                     <div class="col-sm-12" id="p1Scoreboard">
                         <!--PLAYER ONE SCOREBOARD-->
-                        <p>WINS:</p>
-                        <p>LOSSES:</p>
+                        <p id= "playerOneWins">WINS:</p>
+                        <p id= "playerOneLoses">LOSSES:</p>
+                        <p id= "playerTie">TIES:</p>
                     </div>
                 </div>
             </div>
@@ -47,8 +54,9 @@
                     <div class=row>
                         <div class="col-sm-12" id="p1Scoreboard">
                             <!--PLAYER TWO SCOREBOARD-->
-                            <p>WINS:</p>
-                            <p>LOSSES:</p>
+                            <p id= "playerTwoWins">WINS:</p>
+                            <p id= "playerTwoLoses">LOSSES:</p>
+                            <p id= "playerTie">TIES:</p>
                         </div>
                     </div>
                 </div>
