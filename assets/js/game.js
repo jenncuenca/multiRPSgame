@@ -1,3 +1,5 @@
+$(document).on('ready', function() {
+
 // Initialize Firebase
 var config = {
     apiKey: "AIzaSyDbXZ_Suszm88gVV8UCv9DgbJTyNG-Ng_U",
@@ -16,9 +18,16 @@ var config = {
   var winsP2= 0;
   var lossP2= 0;
 
-  //PLAYER CHOICE VARIABLES
+  //PLAYER VARIABLES
+  var playerName=[];
   var p1Choice= '';
   var p2Choice= '';
+
+  console.log(p1Choice);
+  console.log(p2Choice);
+
+  //GAME VARIABLES
+  var choices=['rock','paper','scissors'];
 
 // MAIN GAME CODE
 
@@ -40,4 +49,5 @@ var config = {
   //WINS, LOSSES, AND TIES GET TRACKED AND DISPLAYED ON PAGE
 
 //CHAT FUNCTIONALITY MAYBE?
-  
+
+}); //End of Doc-Ready Function
